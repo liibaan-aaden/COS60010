@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Bright Boost - Student Home</title>
+</head>
+
+<body>
+    
+    <header class="header">Welcome to Bright Boost Student Portal</header>
+    
+    <div class="container">
+    
+<div class="registration-container student-home">
+
+        <h2>Student Dashboard</h2>
+        
+        <!-- Ticket Creation Section -->
+<div class="ticket-section">
+    <h3>Create a Ticket</h3>
+    <form action="/create-ticket.php" method="post" enctype="multipart/form-data">
+        
+        <!-- Subject Category -->
+        <div class="input-group">
+            <label for="ticket-subject-category">Subject</label>
+            <select id="ticket-subject-category" name="ticket-subject-category" required>
+                <option value="">Select Subject</option>
+                <!-- Add more subject options here -->
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+                <!-- ... -->
+            </select>
+        </div>
+
+        <!-- Question Field -->
+        <div class="input-group">
+            <label for="ticket-description">Your Question</label>
+            <textarea id="ticket-description" name="ticket-description" rows="4" required></textarea>
+        </div>
+
+        <!-- File Attachment Field -->
+        <div class="input-group">
+            <label for="ticket-attachment">Attach Files (optional)</label>
+            <input type="file" id="ticket-attachment" name="ticket-attachment" accept=".doc,.docx,.pdf,.jpg,.png">
+        </div>
+
+        <!-- Assigned Tutor Field (This might be automated in the backend) -->
+        <div class="input-group">
+            <label for="assigned-tutor">Assigned Tutor</label>
+            <input type="text" id="assigned-tutor" name="assigned-tutor" readonly>
+            <!-- readonly ensures students don't manually edit the assigned tutor. 
+                 This will typically be populated by your backend system. -->
+        </div>
+
+        <button type="submit">Submit Ticket</button>
+    </form>
+
+    <!-- This button would be displayed conditionally based on the status of the ticket -->
+    <button class="need-more-help-btn" onclick="joinQueue()">Need More Help</button>
+</div>
+
+
+        <div class="spacer"></div>
+
+        <!-- Time Table Section -->
+        <div class="timetable-section">
+            <h3>My Time Table</h3>
+            <!-- Time table content can be dynamically loaded here or linked to another page -->
+            <p><a href="view-timetable.php">View Time Table</a></p>
+        </div>
+
+        <div class="spacer"></div>
+
+        <!-- Mark Attendance Section -->
+        <div class="attendance-section">
+            <h3>Mark Attendance</h3>
+            <form action="/mark-attendance.php" method="post">
+                <!-- Add any required input fields for marking attendance -->
+                <button type="submit">Mark Attendance for Today</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>

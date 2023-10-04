@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <title>Bright Boost - Student Registration</title>
+</head>
+
+<body>
+    <div class="registration-container">
+        <h2>Welcome to Bright Boost</h2>
+        <p>Enroll in our after-school tutoring program.</p>
+
+        <!-- Changed action to "register.php" -->
+        <form id="registrationForm" action="register.php" method="post">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="school">High School</label>
+                <input type="text" id="school" name="school" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+
+            <div class="input-group">
+                <label for="subjects">Subjects of Interest</label>
+                <select id="subjects" name="subjects[]" multiple="multiple">
+                    <option value="English">English</option>
+                    <option value="History">History</option>
+                    <option value="Mathmatics">Mathematics</option>
+                    <option value="Science">Science</option>
+                    <option value="Geography">Geography</option>
+                </select>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Select2 JS and Initialization -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#subjects').select2();
+        });
+
+        // Removed the event listener to allow form submission to "register.php"
+    </script>
+</body>
+
+</html>

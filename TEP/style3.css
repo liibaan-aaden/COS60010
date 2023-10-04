@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #333; /* Default text color */
+}
+
+.container {
+    padding: 3% 10%; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tutor-container,.ticket-dashboard, .timetable-section, .reporting-tools {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(50, 50, 93, 0.1);
+    border: 1px solid rgba(50, 50, 93, 0.15);
+    border-radius: 20px;
+    margin-top: 30px;  
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background: #3498db;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+h2, h3 {
+    color: #3498db;
+}
+
+.ticket {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+}
+
+.status {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.to-do {
+    background-color: #f39c12;
+}
+
+.spacer {
+    margin: 30px 0;
+}
